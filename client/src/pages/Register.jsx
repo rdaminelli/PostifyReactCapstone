@@ -29,7 +29,7 @@ const Register = () => {
 
   return (
     <div className="auth">
-      <h1>Register</h1>
+      <h1>Signup</h1>
       <form>
         <input
           required
@@ -52,10 +52,10 @@ const Register = () => {
           name="password"
           onChange={handleChange}
         />
-        <button onClick={handleSubmit}>Register</button>
+        <button onClick={handleSubmit}>Signup</button>
         {err && <p>{err}</p>}
         <span>
-          Do you have an account? <Link to="/login">Login</Link>
+          Already have an account? <Link to="/login">Login</Link>
         </span>
       </form>
     </div>

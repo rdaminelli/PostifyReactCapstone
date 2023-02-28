@@ -6,7 +6,7 @@ const Footer = () => {
     <footer>
       <img src={postifyLogo} alt="" />
       <span>
-        Made with ♥️ and <b>React.js</b>.
+        My first React project <span>👋 ⚛️</span>
       </span>
     </footer>
   );

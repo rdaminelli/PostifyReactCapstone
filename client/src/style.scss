@@ -1,11 +1,12 @@
-$lightGreen: rgb(211, 211, 211);
+$lightGrey: rgb(211, 211, 211);
+$postifyRed: rgb(220, 0, 0);
 
 .app {
   display: flex;
   justify-content: center;
+  
   .container {
     width: 1024px;
-
     .link {
       text-decoration: none;
       color: inherit;
@@ -18,11 +19,12 @@ $lightGreen: rgb(211, 211, 211);
       align-items: center;
       justify-content: center;
       height: 100vh;
-      background-color: $lightGreen;
+      background: rgb(45,176,255);
+      background: linear-gradient(28deg, rgba(45,176,255,1) 5%, rgba(115,224,255,1) 50%, rgba(255,251,158,1) 95%);
 
       h1 {
         font-size: 20px;
-        color: teal;
+        color: $postifyRed;
         margin-bottom: 20px;
       }
 
@@ -30,27 +32,39 @@ $lightGreen: rgb(211, 211, 211);
         display: flex;
         flex-direction: column;
         padding: 50px;
-        background-color: white;
+        background-color: rgba(255, 255, 255, 0.226);
         width: 200px;
         gap: 20px;
+        border-radius: 10px;
+        box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
 
         input {
           padding: 10px;
           border: none;
-          border-bottom: 1px solid gray;
+          border-radius: 10px;
+          &:focus{
+            outline: none;
+          }
         }
 
         button {
           padding: 10px;
           border: none;
-          background-color: teal;
+          background-color: $postifyRed;
           cursor: pointer;
           color: white;
+          border-radius: 10px;
+
+          &:hover {
+            color: $postifyRed;
+            background-color: white;
+            transition: .5s;
+          }
         }
 
         p {
           font-size: 12px;
-          color: red;
+          color: $postifyRed;
           text-align: center;
         }
 
@@ -89,20 +103,22 @@ $lightGreen: rgb(211, 211, 211);
           }
 
           .write {
-            background-color: $lightGreen;
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
+            background-color: rgb(30, 215, 248);
+            color: white;
+            width: 100px;
+            height: 30px;
+            border-radius: 5px;
             display: flex;
             align-items: center;
             justify-content: center;
             font-weight: 300;
             border: 1px solid white;
+            font-weight: bold;
 
             &:hover {
-              color: teal;
+              color: $postifyRed;
               background-color: white;
-              border: 1px solid teal;
+              border: 1px solid $postifyRed;
             }
           }
         }
@@ -114,11 +130,11 @@ $lightGreen: rgb(211, 211, 211);
     footer {
       margin-top: 100px;
       padding: 20px;
-      background-color: $lightGreen;
+      background-color: $lightGrey;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      font-size: 12px;
+      font-size: 20px;
       img {
         height: 50px;
       }
@@ -149,7 +165,7 @@ $lightGreen: rgb(211, 211, 211);
               content: "";
               width: 100%;
               height: 100%;
-              background-color: $lightGreen;
+              background-color: $lightGrey;
               position: absolute;
               top: 20px;
               left: -20px;
@@ -183,12 +199,12 @@ $lightGreen: rgb(211, 211, 211);
               border: none;
               cursor: pointer;
               background-color: white;
-              border: 1px solid teal;
-              color: teal;
+              border: 1px solid $postifyRed;
+              color: $postifyRed;
 
               &:hover {
                 border: 1px solid white;
-                background-color: $lightGreen;
+                background-color: $lightGrey;
                 color: black;
               }
             }
@@ -218,12 +234,11 @@ $lightGreen: rgb(211, 211, 211);
         .user {
           display: flex;
           align-items: center;
-          gap: 10px;
+          gap: 20px;
           font-size: 14px;
           img {
             width: 50px;
             height: 50px;
-            border-radius: 50%;
             object-fit: cover;
           }
 
@@ -284,13 +299,13 @@ $lightGreen: rgb(211, 211, 211);
             padding: 7.5px 15px;
             border: none;
             cursor: pointer;
-            color: teal;
+            color: $postifyRed;
             background-color: white;
-            border: 1px solid teal;
+            border: 1px solid $postifyRed;
 
             &:hover {
               border: 1px solid white;
-              background-color: $lightGreen;
+              background-color: $lightGrey;
               color: black;
             }
           }
@@ -359,16 +374,16 @@ $lightGreen: rgb(211, 211, 211);
 
             :first-child{
               cursor: pointer;
-              color: teal;
+              color: $postifyRed;
               background-color: white;
-              border: 1px solid teal;
+              border: 1px solid $postifyRed;
               padding: 3px 5px;
             }
             :last-child{
               cursor: pointer;
               color: white;
-              background-color: teal;
-              border: 1px solid teal;
+              background-color: $postifyRed;
+              border: 1px solid $postifyRed;
               padding: 3px 5px;
             }
           }
@@ -377,7 +392,7 @@ $lightGreen: rgb(211, 211, 211);
             display: flex;
             align-items: center;
             gap: 2px;
-            color: teal;
+            color: $postifyRed;
           }
         }
       }
